@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	background-color: #ccc;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 2rem;
+}
+
+h1 {
+	margin: 2rem;
+	border-bottom: 3.5px solid #333;
+	text-align: center;
+	color: lightseagreen;
+	font-size: 3rem;
+}
+
+.board {
+	background: #fff;
+	border: 5px solid #fff;
+	width: 500px;
+	height: 500px;
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	gap: 2rem;
+	box-shadow: 2px 2px 5px #333;
+}
+
+.squares {
+	background: lightseagreen;
+	border: none;
+	font-size: 5rem;
+	cursor: pointer;
+	outline: none;
+}
+
+.X,
+.O {
+	color: #fff;
+}
+
+.info-wrapper {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid #333;
+	margin-top: 15px;
+}
+
+h3 {
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+.info-wrapper button {
+	background: lightseagreen;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 7px;
+	transition: transform 400ms;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.info-wrapper button:hover {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 5px #333;
 }
