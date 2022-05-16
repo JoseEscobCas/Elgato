@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { calculateWinner } from '../Patterns';
-import Board from './board';
+import Board from './Board';
+import useStore from './GameStore';
 
 const Game = () => {
 	//History is ausestate hook for use the state in game to move after or to move befor.
@@ -9,7 +10,8 @@ const Game = () => {
 	const [xisNext, setXIsNext] = useState(true);
 	const winner = calculateWinner(history[stepNum]);
 	const player = xisNext ? 'X' : 'O';
-
+	const historyPlayer = useStore((state) => state.historyPlayer);
+	console.log(historyPlayer);
 	//use slice and clone the Array to get befor and after each play
 	const handleClick = (idx) => {
 		const historyStep = history.slice(0, stepNum + 1);
