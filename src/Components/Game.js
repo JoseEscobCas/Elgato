@@ -10,8 +10,9 @@ const Game = () => {
 	const [xisNext, setXIsNext] = useState(true);
 	const winner = calculateWinner(history[stepNum]);
 	const player = xisNext ? 'X' : 'O';
-	const historyPlayer = useStore((state) => state.historyPlayer);
-	console.log(historyPlayer);
+	const movesPosition = useStore((state) => state.movesPosition);
+	console.log(movesPosition);
+
 	//use slice and clone the Array to get befor and after each play
 	const handleClick = (idx) => {
 		const historyStep = history.slice(0, stepNum + 1);
