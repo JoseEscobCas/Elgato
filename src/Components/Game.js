@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { calculateWinner } from '../Patterns';
 import Board from './Board';
-import useStore from './GameStore';
+import useStore from '../Store/GameStore';
 
 const Game = () => {
 	//History is ausestate hook for use the state in game to move after or to move befor.
@@ -10,8 +10,9 @@ const Game = () => {
 	const [xisNext, setXIsNext] = useState(true);
 	const winner = calculateWinner(history[stepNum]);
 	const player = xisNext ? 'X' : 'O';
-	const movesPosition = useStore((state) => state.movesPosition);
-	console.log(movesPosition);
+	const count = useStore((state) => state.count);
+	const [score, setScore] = useState({ oScore: 0, xScore: 0 });
+	const { xScore, oScore } = score;
 
 	//use slice and clone the Array to get befor and after each play
 	const handleClick = (idx) => {
@@ -27,6 +28,16 @@ const Game = () => {
 		setStepNum([historyStep.length]);
 		setXIsNext(!xisNext);
 	};
+
+	if (winner === 'O') {
+		let { oScore } = score;
+		oScore += 1;
+		count(setScore({ ...score, oScore }));
+	} else {
+		let { xScore } = score;
+		xScore += 1;
+		count(setScore({ ...score, xScore }));
+	}
 
 	const jumpTo = (step) => {
 		setStepNum(step);
@@ -47,6 +58,11 @@ const Game = () => {
 	return (
 		<>
 			<h1>El Gato</h1>
+			<div className="winerTable">
+				<h2>The Winers</h2>
+				<h5>Jugador X: {xScore} </h5>
+				<h5>Jugador O: {oScore}</h5>
+			</div>
 			<Board squares={history[stepNum]} onClick={handleClick} />
 			<div className="info-wrapper">
 				<div>

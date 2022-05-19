@@ -24,7 +24,32 @@ h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
 }
-
+/*winertable*/
+.winerTable {
+	display: block;
+	background: #fff;
+	padding: 5px;
+	width: 15%;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px black;
+	position: absolute;
+	text-align: center;
+	right: 100px;
+}
+.winerTable h2 {
+	border-bottom: 3.5px solid #333;
+	color: lightseagreen;
+}
+.winerTable h5 {
+	font-weight: bold;
+	padding: 5px;
+	font-size: 1.5rem;
+	transition: transform 400ms;
+	cursor: pointer;
+}
+.winerTable h5:hover {
+	transform: scale(1.1);
+}
 .board {
 	background: #fff;
 	border: 5px solid #fff;
