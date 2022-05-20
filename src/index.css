@@ -45,7 +45,7 @@ h1 {
 	padding: 5px;
 	font-size: 1.5rem;
 	transition: transform 400ms;
-	cursor: pointer;
+	cursor: default;
 }
 .winerTable h5:hover {
 	transform: scale(1.1);
@@ -68,7 +68,12 @@ h1 {
 	cursor: pointer;
 	outline: none;
 }
-
+.squares:hover {
+	box-shadow: 2px 2px 5px #333;
+}
+.squares:active {
+	background: rgb(38, 221, 212);
+}
 .X,
 .O {
 	color: #fff;

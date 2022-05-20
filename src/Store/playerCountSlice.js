@@ -1,6 +1,6 @@
-const playerCounte = (set, get) => ({
-	count: 0,
-	playerWin: () => set((state) => ({ count: state.count + 1 })),
+const playerCounter = (set, get) => ({
+	count: [],
+	setCount: () => set((state, payload) => ({ count: payload })),
 });
 
-export default playerCounte;
+export default playerCounter;

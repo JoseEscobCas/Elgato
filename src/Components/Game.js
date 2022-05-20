@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { calculateWinner } from '../Patterns';
 import Board from './Board';
 import useStore from '../Store/GameStore';
+import ScoreBoard from './ScoreComponent';
 
 const Game = () => {
 	//History is ausestate hook for use the state in game to move after or to move befor.
@@ -10,9 +11,8 @@ const Game = () => {
 	const [xisNext, setXIsNext] = useState(true);
 	const winner = calculateWinner(history[stepNum]);
 	const player = xisNext ? 'X' : 'O';
-	const count = useStore((state) => state.count);
-	const [score, setScore] = useState({ oScore: 0, xScore: 0 });
-	const { xScore, oScore } = score;
+	const [count, setCount] = useStore((state) => state.count);
+	const [scores, setScores] = useState({ xScore: 0, oScore: 0 });
 
 	//use slice and clone the Array to get befor and after each play
 	const handleClick = (idx) => {
@@ -22,22 +22,25 @@ const Game = () => {
 
 		//now we need to know if wine or its occupaid for no more click o to change the x for o.
 		if (winner || squares[idx]) return;
+
 		//then if the square is selecet??
 		squares[idx] = player;
 		setHistory([...historyStep, squares]);
 		setStepNum([historyStep.length]);
 		setXIsNext(!xisNext);
+
+		if (winner === 'O') {
+			let { oScore } = scores;
+			oScore += 1;
+			setScores({ ...scores, oScore });
+		} else {
+			let { xScore } = scores;
+			xScore += 1;
+			setScores({ ...scores, xScore });
+		}
 	};
 
-	if (winner === 'O') {
-		let { oScore } = score;
-		oScore += 1;
-		count(setScore({ ...score, oScore }));
-	} else {
-		let { xScore } = score;
-		xScore += 1;
-		count(setScore({ ...score, xScore }));
-	}
+	console.log(winner);
 
 	const jumpTo = (step) => {
 		setStepNum(step);
@@ -58,11 +61,7 @@ const Game = () => {
 	return (
 		<>
 			<h1>El Gato</h1>
-			<div className="winerTable">
-				<h2>The Winers</h2>
-				<h5>Jugador X: {xScore} </h5>
-				<h5>Jugador O: {oScore}</h5>
-			</div>
+			<ScoreBoard scores={scores} />
 			<Board squares={history[stepNum]} onClick={handleClick} />
 			<div className="info-wrapper">
 				<div>
