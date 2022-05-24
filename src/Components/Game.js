@@ -22,12 +22,12 @@ const Game = () => {
 
 		//now we need to know if wine or its occupaid for no more click o to change the x for o.
 		if (winner || squares[idx]) return;
-
 		//then if the square is selecet??
 		squares[idx] = player;
 		setHistory([...historyStep, squares]);
 		setStepNum([historyStep.length]);
 		setXIsNext(!xisNext);
+		checkWiner();
 	};
 
 	const jumpTo = (step) => {
@@ -47,15 +47,17 @@ const Game = () => {
 			);
 		});
 
-	if (winner === 'O') {
-		let { oScore } = scores;
-		oScore += 1;
-		setCount({ ...scores, oScore });
-	} else {
-		let { xScore } = scores;
-		xScore += 1;
-		setCount({ ...scores, xScore });
-	}
+	const checkWiner = () => {
+		let { oScore, xScore } = scores;
+
+		if (winner === 'O') {
+			oScore += 1;
+			setCount({ oScore, xScore });
+		} else {
+			xScore += 1;
+			setCount({ oScore, xScore });
+		}
+	};
 
 	console.log(winner);
 	console.log(scores);
