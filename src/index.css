@@ -20,7 +20,7 @@ h1 {
 	margin: 2rem;
 	border-bottom: 3.5px solid #333;
 	text-align: center;
-	color: lightseagreen;
+	color: #ff91af;
 	font-size: 3rem;
 	text-transform: uppercase;
 }
@@ -29,7 +29,7 @@ h1 {
 	display: block;
 	background: #fff;
 	padding: 5px;
-	width: 15%;
+	width: 18%;
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px black;
 	position: absolute;
@@ -38,7 +38,7 @@ h1 {
 }
 .winerTable h2 {
 	border-bottom: 3.5px solid #333;
-	color: lightseagreen;
+	color: #ff91af;
 }
 .winerTable h5 {
 	font-weight: bold;
@@ -50,6 +50,24 @@ h1 {
 .winerTable h5:hover {
 	transform: scale(1.1);
 }
+/*
+.btn-retart {
+	background: #ff91af;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 7px;
+	transition: transform 400ms;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btn-retart:hover {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 5px #333;
+}*/
+
+/*board*/
 .board {
 	background: #fff;
 	border: 5px solid #fff;
@@ -62,7 +80,7 @@ h1 {
 }
 
 .squares {
-	background: lightseagreen;
+	background: #ff91af;
 	border: none;
 	font-size: 5rem;
 	cursor: pointer;
@@ -72,7 +90,7 @@ h1 {
 	box-shadow: 2px 2px 5px #333;
 }
 .squares:active {
-	background: rgb(38, 221, 212);
+	background: #fc84a4;
 }
 .X,
 .O {
@@ -92,7 +110,7 @@ h3 {
 }
 
 .info-wrapper button {
-	background: lightseagreen;
+	background: #ff91af;
 	color: white;
 	border: none;
 	cursor: pointer;

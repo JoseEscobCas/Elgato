@@ -28,19 +28,7 @@ const Game = () => {
 		setHistory([...historyStep, squares]);
 		setStepNum([historyStep.length]);
 		setXIsNext(!xisNext);
-
-		if (winner === 'O') {
-			let { oScore } = scores;
-			oScore += 1;
-			setScores({ ...scores, oScore });
-		} else {
-			let { xScore } = scores;
-			xScore += 1;
-			setScores({ ...scores, xScore });
-		}
 	};
-
-	console.log(winner);
 
 	const jumpTo = (step) => {
 		setStepNum(step);
@@ -50,7 +38,8 @@ const Game = () => {
 	//this button help the player to move in each move played
 	const moves = () =>
 		history.map((_step, move) => {
-			const playGame = move ? `Ir al movieminto #${move}` : `Ir al inicio`;
+			const playGame = move ? `Ir al movieminto #${move}` : `Re-iniciar juego`;
+
 			return (
 				<ol key={move}>
 					<button onClick={() => jumpTo(move)}>{playGame}</button>
@@ -58,10 +47,23 @@ const Game = () => {
 			);
 		});
 
+	if (winner === 'O') {
+		let { oScore } = scores;
+		oScore += 1;
+		setCount({ ...scores, oScore });
+	} else {
+		let { xScore } = scores;
+		xScore += 1;
+		setCount({ ...scores, xScore });
+	}
+
+	console.log(winner);
+	console.log(scores);
+
 	return (
 		<>
 			<h1>El Gato</h1>
-			<ScoreBoard scores={scores} />
+			<ScoreBoard scores={count} />
 			<Board squares={history[stepNum]} onClick={handleClick} />
 			<div className="info-wrapper">
 				<div>
