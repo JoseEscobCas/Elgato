@@ -88,6 +88,23 @@ h1 {
 	color: #fff;
 }
 
+/*btn*/
+.btn-retart {
+	background: #ff91af;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 7px;
+	transition: transform 400ms;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btn-retart:hover {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 5px #333;
+}
+
 .info-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -104,6 +121,7 @@ h3 {
 	background: #ff91af;
 	color: white;
 	border: none;
+	font-size: 1.5rem;
 	cursor: pointer;
 	border-radius: 10px;
 	padding: 7px;
