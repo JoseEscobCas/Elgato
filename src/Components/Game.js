@@ -11,8 +11,9 @@ const Game = () => {
 	const [xisNext, setXIsNext] = useState(true);
 	const winner = calculateWinner(history[stepNum]);
 	const player = xisNext ? 'X' : 'O';
-	const [count, setCount] = useStore((state) => state.count);
-	const [scores, setScores] = useState({ xScore: 0, oScore: 0 });
+	const count = useStore((state) => state.count);
+	const setCount = useStore((state) => state.setCount);
+	const [score, setScore] = useState({ oScore: 0, xScore: 0 });
 
 	//use slice and clone the Array to get befor and after each play
 	const handleClick = (idx) => {
@@ -27,7 +28,17 @@ const Game = () => {
 		setHistory([...historyStep, squares]);
 		setStepNum([historyStep.length]);
 		setXIsNext(!xisNext);
-		checkWiner();
+
+		let { oScore, xScore } = score;
+
+		if (winner === 'O') {
+			oScore++;
+			setScore({ ...score, oScore });
+		} else {
+			xScore++;
+			setScore({ ...score, xScore });
+		}
+		setCount({ oScore, xScore });
 	};
 
 	const jumpTo = (step) => {
@@ -39,7 +50,6 @@ const Game = () => {
 	const moves = () =>
 		history.map((_step, move) => {
 			const playGame = move ? `Ir al movieminto #${move}` : `Re-iniciar juego`;
-
 			return (
 				<ol key={move}>
 					<button onClick={() => jumpTo(move)}>{playGame}</button>
@@ -47,20 +57,8 @@ const Game = () => {
 			);
 		});
 
-	const checkWiner = () => {
-		let { oScore, xScore } = scores;
-
-		if (winner === 'O') {
-			oScore += 1;
-			setCount({ oScore, xScore });
-		} else {
-			xScore += 1;
-			setCount({ oScore, xScore });
-		}
-	};
-
 	console.log(winner);
-	console.log(scores);
+	console.log(count);
 
 	return (
 		<>

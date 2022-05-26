@@ -50,33 +50,15 @@ h1 {
 .winerTable h5:hover {
 	transform: scale(1.1);
 }
-/*
-.btn-retart {
-	background: #ff91af;
-	color: white;
-	border: none;
-	cursor: pointer;
-	border-radius: 10px;
-	padding: 7px;
-	transition: transform 400ms;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.btn-retart:hover {
-	transform: scale(1.1);
-	box-shadow: 2px 2px 5px #333;
-}*/
 
 /*board*/
 .board {
-	background: #fff;
-	border: 5px solid #fff;
+	background: transparent;
 	width: 500px;
 	height: 500px;
 	display: grid;
 	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 	gap: 2rem;
-	box-shadow: 2px 2px 5px #333;
 }
 
 .squares {
@@ -85,6 +67,8 @@ h1 {
 	font-size: 5rem;
 	cursor: pointer;
 	outline: none;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px black;
 }
 .squares:hover {
 	box-shadow: 2px 2px 5px #333;
@@ -93,6 +77,13 @@ h1 {
 	background: #fc84a4;
 }
 .X,
+.O {
+	font-size: 7rem;
+	font-weight: bold;
+}
+.X {
+	color: #333;
+}
 .O {
 	color: #fff;
 }
