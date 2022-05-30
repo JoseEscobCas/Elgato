@@ -20,32 +20,89 @@ h1 {
 	margin: 2rem;
 	border-bottom: 3.5px solid #333;
 	text-align: center;
-	color: lightseagreen;
+	color: #ff91af;
 	font-size: 3rem;
+	text-transform: uppercase;
+}
+/*winertable*/
+.winerTable {
+	display: block;
+	background: #fff;
+	padding: 5px;
+	width: 18%;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px black;
+	position: absolute;
+	text-align: center;
+	right: 100px;
+}
+.winerTable h2 {
+	border-bottom: 3.5px solid #333;
+	color: #ff91af;
+}
+.winerTable h5 {
+	font-weight: bold;
+	padding: 5px;
+	font-size: 1.5rem;
+	transition: transform 400ms;
+	cursor: default;
+}
+.winerTable h5:hover {
+	transform: scale(1.1);
 }
 
+/*board*/
 .board {
-	background: #fff;
-	border: 5px solid #fff;
+	background: transparent;
 	width: 500px;
 	height: 500px;
 	display: grid;
 	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 	gap: 2rem;
-	box-shadow: 2px 2px 5px #333;
 }
 
 .squares {
-	background: lightseagreen;
+	background: #ff91af;
 	border: none;
 	font-size: 5rem;
 	cursor: pointer;
 	outline: none;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px black;
 }
-
+.squares:hover {
+	box-shadow: 2px 2px 5px #333;
+}
+.squares:active {
+	background: #fc84a4;
+}
 .X,
 .O {
+	font-size: 7rem;
+	font-weight: bold;
+}
+.X {
+	color: #333;
+}
+.O {
 	color: #fff;
+}
+
+/*btn*/
+.btn-retart {
+	background: #ff91af;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 7px;
+	transition: transform 400ms;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btn-retart:hover {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 5px #333;
 }
 
 .info-wrapper {
@@ -61,9 +118,10 @@ h3 {
 }
 
 .info-wrapper button {
-	background: lightseagreen;
+	background: #ff91af;
 	color: white;
 	border: none;
+	font-size: 1.5rem;
 	cursor: pointer;
 	border-radius: 10px;
 	padding: 7px;
