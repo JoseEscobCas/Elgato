@@ -28,11 +28,11 @@ then you can start running put this comand:
 0.0.1
 
 ## Tech
-JavaScript Vanilla:
-React Hooks:
+-JavaScript Vanilla:
+-React Hooks:
 Zustan: zustand over redux?
 Simple and un-opinionated
 Makes hooks the primary means of consuming state
 Doesn't wrap your app in context providers
-Css Stlye.
+-Css Stlye.
 
