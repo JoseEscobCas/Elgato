@@ -16,13 +16,14 @@
 - React Js.
 - Css Style. 
 
-## RUN: 
--Download the code.
--Unzip the code and then running in visualcode(or any IDE you must prefer).
--Open de code in the IDE, the use a terminal and put this comand.
--"npm i or npm install".
--then you can start running put this comand.
--"npm run start".
+## Run:
+
+- Download the code.
+- Unzip the code and then running in visualcode(or any IDE you must prefer).
+- Open de code in the IDE, the use a terminal and put this comand.
+- "npm i or npm install".
+- then you can start running put this comand.
+- "npm run start".
 - "server listening on port: 3000".
 
 ## Tech: 
