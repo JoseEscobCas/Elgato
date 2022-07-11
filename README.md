@@ -10,12 +10,12 @@
 - Check the score and restart the game again.
 - Check the play game backwards moves and the forward move and start the game in the move you want.
 
-## Structure
+## Structure:
 
 - TIC TAC TOE(EL Gato): Javascript JSX.
 - React Js, Css Style, 
 - 
-## RUN
+## RUN: 
 -Download the code.
 -Unzip the code and then running in visualcode(or any IDE you must prefer)
 -Open de code in the IDE, the use a terminal and put this comand
@@ -24,10 +24,10 @@ then you can start running put this comand:
 "npm run start"
 - "server listening on port: 3000".
 
-## Version
+## Version: 
 0.0.1
 
-## Tech
+## Tech:
 -JavaScript Vanilla:
 -React Hooks:
 Zustan: zustand over redux?
