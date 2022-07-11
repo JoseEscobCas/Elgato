@@ -31,7 +31,7 @@
 
 ## Structure:
 
-- JavaScript Vanilla.
+- JavaScript and JSX.
 - React Hooks: zustand over redux?
 Simple and un-opinionated
 Makes hooks the primary means of consuming state
