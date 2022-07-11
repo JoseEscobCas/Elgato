@@ -5,7 +5,7 @@
 
 ##  TIC TAC TOE(EL Gato) Features:
 
-- Play a Tic Tac Toe Game
+- Play a Tic Tac Toe Game.
 - Play with some friends.
 - Check the score and restart the game again.
 - Check the play game backwards moves and the forward move and start the game in the move you want.
@@ -13,26 +13,27 @@
 ## Structure:
 
 - TIC TAC TOE(EL Gato): Javascript JSX.
-- React Js, Css Style, 
-- 
+- React Js.
+- Css Style. 
+
 ## RUN: 
 -Download the code.
--Unzip the code and then running in visualcode(or any IDE you must prefer)
--Open de code in the IDE, the use a terminal and put this comand
-"npm i or npm install"
-then you can start running put this comand:
-"npm run start"
+-Unzip the code and then running in visualcode(or any IDE you must prefer).
+-Open de code in the IDE, the use a terminal and put this comand.
+-"npm i or npm install".
+-then you can start running put this comand.
+-"npm run start".
 - "server listening on port: 3000".
 
 ## Version: 
 0.0.1
 
 ## Tech:
--JavaScript Vanilla:
+-JavaScript Vanilla.
 -React Hooks:
 Zustan: zustand over redux?
 Simple and un-opinionated
 Makes hooks the primary means of consuming state
-Doesn't wrap your app in context providers
+Doesn't wrap your app in context providers.
 -Css Stlye.
 
