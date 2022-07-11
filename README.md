@@ -25,15 +25,16 @@
 -"npm run start".
 - "server listening on port: 3000".
 
-## Version: 
+## Tech: 
 0.0.1
 
-## Tech:
--JavaScript Vanilla.
--React Hooks:
-Zustan: zustand over redux?
+## Structure:
+
+- JavaScript Vanilla.
+- React Hooks: zustand over redux?
 Simple and un-opinionated
 Makes hooks the primary means of consuming state
 Doesn't wrap your app in context providers.
--Css Stlye.
+- Css Stlye.
+
 
